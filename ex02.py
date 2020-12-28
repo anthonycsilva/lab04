@@ -27,8 +27,3 @@ def formato_data(data):
         segundaData = '/'.join(data1)
         terceiraData = '/'.join(data2)
         return primeiraData, segundaData, terceiraData
-
-
-   #'-'.join(frase2)
-
-print(formato_data('01/01/01'))
