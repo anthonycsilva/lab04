@@ -23,20 +23,3 @@ frase2 ='Curso em vídeo Python'
 #frase.split() ocorre uma divisão dentro da string considerando os espaços digitados
 #'-'.join(frase2) -> junta todos os elementos da frase2 colocando esse traço no meio
 
-
-
- if(dia>31 and mes>12):
-
-        return 0
-    elif(ano == 0):
-       primeiraData = '/'.join(data)
-       data = str(mes), str(dia), str(ano)
-       segundaData = '/'.join(data)
-       return primeiraData, segundaData
-
-    elif(dia == 0):
-        data = str(ano), str(mes),str(dia)
-        return data
-    else:
-        primeiraData = '/'.join(data)
-        return primeiraData
