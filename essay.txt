@@ -1,0 +1,42 @@
+frase = 'Curso em vídeo Python'
+frase2 ='Curso em vídeo Python'
+
+#frase[9:13] exclui o 13, vai até o 12
+#frase[9:21:2] o 2 na ultima casa, pula de 2 em 2:  9,11,13,15,17,19
+#frase[:5] começa do inicio e vai até a casa 5
+#frase[15:] começa da casa 15 e vai até o final
+#frase[9::3] vai até o final pulando 3 casas
+
+#len(frase) -> comprimento da frase (21 caracteres)
+#frase.count('o') -> conta quantas vezes a letra 'o' apareceu
+#frase.count('o',0,13) -> conta quantas vezes a letra 'o' apareceu até a casa 13 do texto
+#frase.find('deo') -> quantas vezes ele encontrou 'deo', indica a casa aonde começou. se n achar ele retorna -1
+#'Curso' in frase -> returna true ou false se tiver a string
+#frase.replace('Python','Android') -> substitui uma coisa por outra no texto
+#frase.upper() -> deixa tudo em maiusculo
+#frase.lower()
+#frase.capitalize() -> joga todos os caracteres para minusculo, mas só o primeiro maiusculo
+
+#frase.strip() -> tira os espaços a mais do inicio e do final
+#frase.strip() -> variação r(right) tira os espaço da direita, lstrip(left) esqueda.
+
+#frase.split() ocorre uma divisão dentro da string considerando os espaços digitados
+#'-'.join(frase2) -> junta todos os elementos da frase2 colocando esse traço no meio
+
+
+
+ if(dia>31 and mes>12):
+
+        return 0
+    elif(ano == 0):
+       primeiraData = '/'.join(data)
+       data = str(mes), str(dia), str(ano)
+       segundaData = '/'.join(data)
+       return primeiraData, segundaData
+
+    elif(dia == 0):
+        data = str(ano), str(mes),str(dia)
+        return data
+    else:
+        primeiraData = '/'.join(data)
+        return primeiraData
