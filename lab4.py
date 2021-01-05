@@ -1,7 +1,19 @@
-def calculaMedia(nome,nota1,nota2,nota3):
-#Essa função recebe o nome do aluno e suas 3 notas e tira sua media, retornando o nome do mesmo e dizendo se foi aprovado ou não com aquela nota
-    mediaNota = (nota1+nota2+nota3)/3
-    roundedMediaNota = round(mediaNota,1)
+def calculaMedia(aluno):
+#essa função rebece uma tupla com o nome e tres notas e retorna se o aluno em questão foi reprovado ou não e sua média
+    nome = aluno[0]
+    n1 = int(aluno[1])
+    n2 = int(aluno[2])
+    n3 = int(aluno[3])
+
+    mediaNota = (n1 + n2 + n3) / 3
+    roundedMediaNota = round(mediaNota, 1)
+
+    if (mediaNota >= 7):
+        return nome, roundedMediaNota, 'Aprovado', 'Parabens'
+    elif (mediaNota < 7 and mediaNota > 5):
+        return nome, roundedMediaNota, 'Aprovado'
+    else:
+        return str(nome), roundedMediaNota, 'Reprovado'
 
     if(mediaNota>=7):
         return nome,roundedMediaNota,'Aprovado', 'Parabens'
@@ -12,6 +24,7 @@ def calculaMedia(nome,nota1,nota2,nota3):
 
 def formato_data(data):
 #essa função recebe uma data, e reconhece como essa data está escrita e retorna o formato da mesma
+#string -> tupla
     dataSeparada = data.split('/')
     diaStr = dataSeparada[0]
     mesStr = dataSeparada[1]
