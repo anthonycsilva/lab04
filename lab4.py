@@ -13,7 +13,7 @@ def calculaMedia(aluno):
     elif (mediaNota < 7 and mediaNota > 5):
         return nome, roundedMediaNota, 'Aprovado'
     else:
-        return str(nome), roundedMediaNota, 'Reprovado'
+        return nome, roundedMediaNota, 'Reprovado'
 
     if(mediaNota>=7):
         return nome,roundedMediaNota,'Aprovado', 'Parabens'
