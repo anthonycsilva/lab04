@@ -13,13 +13,14 @@ def substitui(s,x,i):
 
 
 
-def recursiva(s):
+
+ def recursiva(s):
     # Essa função recebe uma string e escreve a mesma string dentro de si.
     # String -> String
     tamanho = len(s)
-    meio = round(tamanho/2)
+    meio = math.floor(round(tamanho / 2))
+    string_inicio = s[:meio]
+    string_final = s[meio:]
+    return (string_inicio, string_final)
 
-    stringInicio = s[:meio]
-    stringFinal = s[meio:]
-    inserirString = stringInicio + s + stringFinal
-    return inserirString
+ print(recursiva('abcd'))

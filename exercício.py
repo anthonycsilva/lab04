@@ -1,26 +1,25 @@
-def formato_data(data):
+def colisao(ret1,ret2):
+    x_inf_esq1 = ret1[:1]
+    y_inf_esq1 = ret1[2:3]
+    x_sup_dir1 = ret1[4:5]
+    y_sup_dir1 = ret1[6:7]
 
-    #strings
-    diaString = data[0:2]
-    mesString = data[3:5]
-    anoString = data[6:]
+    x_inf_esq2 = ret2[:1]
+    y_inf_esq2 = ret2[2:3]
+    x_sup_dir2 = ret2[4:5]
+    y_sup_dir2 = ret2[6:7]
 
-    #inteiros
-    diaInt = int(diaString)
-    mesInt = int(mesString)
-    anoInt = int(anoString)
+    if (x_inf_esq1 < x_inf_esq2 + x_sup_dir2 and
+            x_inf_esq1 + x_sup_dir1 > x_inf_esq2 and
+            y_inf_esq1 < y_inf_esq2 + y_sup_dir2 and
+            y_inf_esq1 + y_sup_dir1 > y_inf_esq2):
 
-    if(diaInt>31 and mesInt>12):
-        return 0
-    elif(diaInt>31 or mesInt>12):
-        return 0
-    elif(anoInt == 0):
-       return 'dd/mm/yy', 'mm/dd/yy'
-    elif (diaInt == 0):
+        return True
 
-        return 'yy/mm/dd'
     else:
-        return 'dd/mm/yy', 'mm/dd/aa', 'yy/mm/dd'
+
+        return False
 
 
-print(formato_data('01/01/01'))
+
+print(colisao('6,5,3,7','3,2,6,8'))
